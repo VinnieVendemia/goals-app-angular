@@ -8,6 +8,8 @@ A front-end web interface for the Goals App, built in Angular!
 
 I wanted to learn more about angular, I had already setup a backend api using node/express, and wanted to have a separate FE.
 
+I've been following [this guide](https://angular.io/guide/quickstart) for the most part and trying to adapt it to what I need.
+
 ## Built in Angular tools 
 
 ### Development server

@@ -5,7 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Goals App';
-  goal  = 'Goal 1'
+  goal: Goal = {
+  	id: 1,
+  	title: 'Goal 1'
+  }
+}
+
+export class Goal {
+  id: number;
+  title: string;
 }

@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 	  <h1>{{title}}</h1>
 	  <h2>{{goal.title}} details!</h2>
 	  <div><label>id: </label>{{goal.id}}</div>
-	  <div><label>name: </label>{{goal.title}}</div>
+	  <div>
+      <label>Title: </label>
+      <input [(ngModel)]="goal.title" placeholder="title">
+    </div>
 	  `
 })
 

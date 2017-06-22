@@ -85,7 +85,8 @@ export class AppComponent {
   goal: Goal = {
   	id: 1,
   	title: 'Goal 1'
-  }
+  };
+  goals = GOALS;
 }
 
 export class Goal {

@@ -16,6 +16,12 @@ const GOALS: Goal[] = [
   styleUrls: ['./app.component.css'],
   template: `
 	  <h1>{{title}}</h1>
+    <h2>My Goals</h2>
+    <ul class="goals">
+      <li *ngFor="let goal of goals">
+        <span class="badge">{{goal.id}}</span> {{goal.title}}
+      </li>
+    </ul>
 	  <h2>{{goal.title}} details!</h2>
 	  <div><label>id: </label>{{goal.id}}</div>
 	  <div>

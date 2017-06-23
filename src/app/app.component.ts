@@ -84,12 +84,15 @@ const GOALS: Goal[] = [
 
 export class AppComponent {
   title = 'Goals App';
-  goal: Goal = {
-  	id: 1,
-  	title: 'Goal 1'
-  };
   goals = GOALS;
+  selectedGoal: Goal;
+
+  onSelect(goal: Goal): void {
+    this.selectedGoal = goal;
+  }
+
 }
+
 
 export class Goal {
   id: number;

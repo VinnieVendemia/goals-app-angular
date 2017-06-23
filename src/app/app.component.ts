@@ -18,15 +18,17 @@ const GOALS: Goal[] = [
 	  <h1>{{title}}</h1>
     <h2>My Goals</h2>
     <ul class="goals">
-      <li *ngFor="let goal of goals">
+      <li *ngFor="let goal of goals" (click)="onSelect(goal)">
         <span class="badge">{{goal.id}}</span> {{goal.title}}
       </li>
     </ul>
-	  <h2>{{goal.title}} details!</h2>
-	  <div><label>id: </label>{{goal.id}}</div>
-	  <div>
-      <label>Title: </label>
-      <input [(ngModel)]="goal.title" placeholder="title">
+    <div *ngIf="selectedGoal">
+  	  <h2>{{selectedGoal.title}} details!</h2>
+  	  <div><label>id: </label>{{selectedGoal.id}}</div>
+  	  <div>
+        <label>Title: </label>
+        <input [(ngModel)]="selectedGoal.title" placeholder="title">
+      </div>
     </div>
 	  `,
   styles: [`

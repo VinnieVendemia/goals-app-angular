@@ -18,7 +18,7 @@ const GOALS: Goal[] = [
 	  <h1>{{title}}</h1>
     <h2>My Goals</h2>
     <ul class="goals">
-      <li *ngFor="let goal of goals" (click)="onSelect(goal)">
+      <li *ngFor="let goal of goals" (click)="onSelect(goal)" [class.selected]="goal === selectedGoal">
         <span class="badge">{{goal.id}}</span> {{goal.title}}
       </li>
     </ul>

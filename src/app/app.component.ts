@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Goal } from './goal';
 
 const GOALS: Goal[] = [
   { id: 11, title: 'Goal 1' },
@@ -91,10 +92,4 @@ export class AppComponent {
     this.selectedGoal = goal;
   }
 
-}
-
-
-export class Goal {
-  id: number;
-  title: string;
 }

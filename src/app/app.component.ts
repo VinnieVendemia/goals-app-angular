@@ -23,15 +23,8 @@ const GOALS: Goal[] = [
         <span class="badge">{{goal.id}}</span> {{goal.title}}
       </li>
     </ul>
-    <div *ngIf="selectedGoal">
-  	  <h2>{{selectedGoal.title}} details!</h2>
-  	  <div><label>id: </label>{{selectedGoal.id}}</div>
-  	  <div>
-        <label>Title: </label>
-        <input [(ngModel)]="selectedGoal.title" placeholder="title">
-      </div>
-    </div>
-	  `,
+    <goal-detail [goal]="selectedGoal"></goal-detail>
+    `,
   styles: [`
   .selected {
     background-color: #CFD8DC !important;

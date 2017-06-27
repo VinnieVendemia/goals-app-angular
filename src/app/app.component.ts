@@ -1,4 +1,8 @@
+// Import Angular components 
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+
+// Import App Components
 import { Goal } from './goal';
 import { GoalService } from './goal.service'
 
@@ -68,7 +72,7 @@ import { GoalService } from './goal.service'
 providers: [GoalService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Goals App';
   goals: Goal[];
   selectedGoal: Goal;
@@ -81,6 +85,10 @@ export class AppComponent {
 
   getGoals(): void {
     this.goals = this.goalService.getGoals();
+  }
+
+  ngOnInit(): void {
+    this.getGoals();
   }
 
 }

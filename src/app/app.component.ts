@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Goal } from './goal';
+import { GoalService } from './goal.service'
 
 @Component({
   selector: 'app-root',
@@ -63,7 +64,8 @@ import { Goal } from './goal';
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
+providers: [GoalService]
 })
 
 export class AppComponent {
@@ -73,6 +75,12 @@ export class AppComponent {
 
   onSelect(goal: Goal): void {
     this.selectedGoal = goal;
+  }
+
+  constructor(private goalService: GoalService) {}
+
+  getGoals(): void {
+    this.goals = this.goalService.getGoals();
   }
 
 }

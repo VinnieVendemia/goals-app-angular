@@ -1,16 +1,6 @@
 import { Component } from '@angular/core';
 import { Goal } from './goal';
 
-const GOALS: Goal[] = [
-  { id: 11, title: 'Goal 1' },
-  { id: 12, title: 'Goal 2' },
-  { id: 13, title: 'Goal 3' },
-  { id: 14, title: 'Goal 4' },
-  { id: 15, title: 'Goal 5' },
-  { id: 16, title: 'Goal 6' },
-  { id: 17, title: 'Goal 7' }
-];
-
 @Component({
   selector: 'app-root',
   // templateUrl: './app.component.html',
@@ -78,7 +68,7 @@ const GOALS: Goal[] = [
 
 export class AppComponent {
   title = 'Goals App';
-  goals = GOALS;
+  goals: Goal[];
   selectedGoal: Goal;
 
   onSelect(goal: Goal): void {

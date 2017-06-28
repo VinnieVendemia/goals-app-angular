@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
   constructor(private goalService: GoalService) {}
 
   getGoals(): void {
-    this.goals = this.goalService.getGoals();
+    this.goalService.getGoals().then(goals => this.goals = goals);
   }
 
   ngOnInit(): void {

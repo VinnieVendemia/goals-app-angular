@@ -1,4 +1,4 @@
-import { Goal } from './goal';
+import { Goal } from '../goal';
 
 export const GOALS: Goal[] = [
   { id: 11, title: 'Goal 1' },

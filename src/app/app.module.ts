@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { GoalDetailComponent } from './goal-detail.component';
+import { AppComponent } from './components/app/app.component';
+import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
 
 @NgModule({
   declarations: [

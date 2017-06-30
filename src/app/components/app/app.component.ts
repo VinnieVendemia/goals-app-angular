@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
 // Import App Components
-import { Goal } from './goal';
-import { GoalService } from './services/goal.service'
+import { Goal } from '../../models/goal';
+import { GoalService } from '../../services/goal.service'
 
 @Component({
   selector: 'app-root',

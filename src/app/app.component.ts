@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core';
 
 // Import App Components
 import { Goal } from './goal';
-import { GoalService } from './goal.service'
+import { GoalService } from './services/goal.service'
 
 @Component({
   selector: 'app-root',

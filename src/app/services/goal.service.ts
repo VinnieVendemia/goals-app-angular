@@ -7,4 +7,8 @@ export class GoalService {
 	getGoals(): Promise<Goal[]> {
 		return Promise.resolve(GOALS);
 	}
+
+  addGoal(): Promise<String> {
+    return Promise.resolve(`Successfully created new goal`);
+  }
 }

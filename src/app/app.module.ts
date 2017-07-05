@@ -8,12 +8,14 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
 import { GoalsComponent } from './components/goals/goals.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GoalDetailComponent,
-    GoalsComponent
+    GoalsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,15 @@ import { GoalsComponent } from './components/goals/goals.component';
       {
         path: 'goals',
         component: GoalsComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
       }
     ])
   ],

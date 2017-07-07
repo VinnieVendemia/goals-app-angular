@@ -9,23 +9,23 @@ import { AppComponent } from './components/app/app.component';
 import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GoalService } from './services/goal.service';
 
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     GoalDetailComponent,
-    GoalsComponent,
-    DashboardComponent
+    GoalsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  exports: [RouterModule],
-  providers: [],
+  providers: [GoalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

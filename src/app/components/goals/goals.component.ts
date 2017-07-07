@@ -1,6 +1,7 @@
 // Import Angular components 
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Import App Components
 import { Goal } from '../../models/goal';
@@ -18,11 +19,9 @@ export class GoalsComponent implements OnInit {
   goals: Goal[];
   selectedGoal: Goal;
 
-  onSelect(goal: Goal): void {
-    this.selectedGoal = goal;
-  }
-
-  constructor(private goalService: GoalService) {}
+  constructor(
+    private goalService: GoalService,
+    private router: Router) {}
 
   getGoals(): void {
     this.goalService.getGoals().then(goals => this.goals = goals);
@@ -32,4 +31,11 @@ export class GoalsComponent implements OnInit {
     this.getGoals();
   }
 
+  onSelect(goal: Goal): void {
+    this.selectedGoal = goal;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedGoal.id]);
+  }
 }

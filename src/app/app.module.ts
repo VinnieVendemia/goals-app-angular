@@ -2,13 +2,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-import { RouterModule }   from '@angular/router';
+import { RouterModule, Routes }   from '@angular/router';
 
 // Application Components
 import { AppComponent } from './components/app/app.component';
 import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,22 +22,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'goals',
-        component: GoalsComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      }
-    ])
+    AppRoutingModule
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

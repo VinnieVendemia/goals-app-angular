@@ -8,6 +8,11 @@ export class GoalService {
 		return Promise.resolve(GOALS);
 	}
 
+	getGoal(id: number): Promise<Goal> {
+	  return this.getGoals()
+	             .then(goals => goals.find(goal => goal.id === id));
+	}
+
   addGoal(): Promise<String> {
     return Promise.resolve(`Successfully created new goal`);
   }

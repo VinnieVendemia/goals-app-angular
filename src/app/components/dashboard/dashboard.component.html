@@ -2,7 +2,7 @@
 <div class="grid grid-pad">
   <a *ngFor="let goal of goals"  [routerLink]="['/detail', goal.id]"  class="col-1-4">
     <div class="module goal">
-      <h4>{{goal.name}}</h4>
+      <h4>{{goal.title}}</h4>
     </div>
   </a>
 </div>

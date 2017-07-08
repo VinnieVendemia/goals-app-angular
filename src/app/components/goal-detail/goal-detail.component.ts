@@ -10,7 +10,8 @@ import { GoalService } from '../../services/goal.service';
 
 @Component({
   selector: 'goal-detail',
-  templateUrl: './goal-detail.component.html'
+  templateUrl: './goal-detail.component.html',
+  styleUrls: ['./goal-detail.component.css']
 })
 
 export class GoalDetailComponent implements OnInit {

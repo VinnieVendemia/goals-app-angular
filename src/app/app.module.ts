@@ -5,6 +5,10 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes }   from '@angular/router';
 import { HttpModule }    from '@angular/http';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 // Application Components
 import { AppComponent } from './components/app/app.component';
 import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
@@ -25,7 +29,8 @@ import { AppRoutingModule }     from './app-routing.module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [GoalService],
   bootstrap: [AppComponent]

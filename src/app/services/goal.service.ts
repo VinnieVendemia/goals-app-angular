@@ -27,6 +27,17 @@ export class GoalService {
         .catch(this.handleError);
 	}
 
+  private headers = new Headers({'Content-Type': 'application/json'});
+
+  update(goal: Goal): Promise<Goal> {
+    const url = `${this.goalsUrl}/${goal.id}`;
+    return this.http
+      .put(url, JSON.stringify(goal), {headers: this.headers})
+      .toPromise()
+      .then(() => goal)
+      .catch(this.handleError);
+  }
+
   addGoal(): Promise<String> {
     return Promise.resolve(`Successfully created new goal`);
   }

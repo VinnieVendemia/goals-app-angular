@@ -20,8 +20,11 @@ export class GoalService {
 	}
 
 	getGoal(id: number): Promise<Goal> {
-	  return this.getGoals()
-	             .then(goals => goals.find(goal => goal.id === id));
+	  const url = `${this.goalsUrl}/${id}`;
+    return this.http.get(url)
+        .toPromise()
+        .then(response => response.json().data as Goal)
+        .catch(this.handleError);
 	}
 
   addGoal(): Promise<String> {

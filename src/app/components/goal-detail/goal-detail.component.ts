@@ -33,4 +33,9 @@ export class GoalDetailComponent implements OnInit {
 		goBack(): void {
   		this.location.back();
 		}
+
+    save(): void {
+      this.goalService.update(this.goal)
+        .then(() => this.goBack());
+    }
 }

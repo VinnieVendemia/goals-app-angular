@@ -38,6 +38,14 @@ export class GoalService {
       .catch(this.handleError);
   }
 
+  create(title: string): Promise<Goal> {
+    return this.http
+      .post(this.goalsUrl, JSON.stringify({title: title}), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json().data as Goal)
+      .catch(this.handleError);
+  }
+
   addGoal(): Promise<String> {
     return Promise.resolve(`Successfully created new goal`);
   }

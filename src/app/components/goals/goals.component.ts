@@ -38,4 +38,14 @@ export class GoalsComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedGoal.id]);
   }
+
+  add(title: string): void {
+    title = title.trim();
+    if (!title) { return; }
+    this.goalService.create(title)
+      .then(goal => {
+        this.goals.push(goal);
+        this.selectedGoal = null;
+      });
+  }
 }

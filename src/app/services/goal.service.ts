@@ -46,6 +46,14 @@ export class GoalService {
       .catch(this.handleError);
   }
 
+  delete(id: number): Promise<void> {
+    const url = `${this.goalsUrl}/${id}`;
+    return this.http.delete(url, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
+      .catch(this.handleError);
+  }
+
   addGoal(): Promise<String> {
     return Promise.resolve(`Successfully created new goal`);
   }

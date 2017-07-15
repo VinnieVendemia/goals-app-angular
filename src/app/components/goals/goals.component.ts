@@ -48,4 +48,13 @@ export class GoalsComponent implements OnInit {
         this.selectedGoal = null;
       });
   }
+
+  delete(goal: Goal): void {
+    this.goalService
+        .delete(goal.id)
+        .then(() => {
+          this.goals = this.goals.filter(h => h !== goal);
+          if (this.selectedGoal === goal) { this.selectedGoal = null; }
+        });
+  }
 }

@@ -11,6 +11,8 @@
   	[class.selected]="goal === selectedGoal"
   	(click)="onSelect(goal)">
     <span class="badge">{{goal.id}}</span> {{goal.title}}
+    <button class="delete"
+      (click)="delete(goal); $event.stopPropagation()">x</button>
   </li>
 </ul>
 <div *ngIf="selectedGoal">

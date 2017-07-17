@@ -15,6 +15,7 @@ import { GoalDetailComponent } from './components/goal-detail/goal-detail.compon
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GoalService } from './services/goal.service';
+import { GoalSearchComponent } from './components/goal-search/goal-search.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -23,7 +24,8 @@ import { AppRoutingModule }     from './app-routing.module';
     AppComponent,
     DashboardComponent,
     GoalDetailComponent,
-    GoalsComponent
+    GoalsComponent,
+    GoalSearchComponent
   ],
   imports: [
     BrowserModule,

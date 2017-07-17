@@ -13,7 +13,7 @@ export class GoalSearchService {
  
   search(term: string): Observable<Goal[]> {
     return this.http
-               .get(`api/goals/?name=${term}`)
+               .get(`api/goals/?title=${term}`)
                .map(response => response.json().data as Goal[]);
   }
 }

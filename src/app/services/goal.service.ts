@@ -8,7 +8,7 @@ import { Goal } from '../models/goal'
 @Injectable()
 export class GoalService {
 
-  private goalsUrl = 'api/goals';  // URL to web api
+  private goalsUrl = 'https://goals-app-api.herokuapp.com';  // URL to web api
 
   constructor(private http: Http) { }
 

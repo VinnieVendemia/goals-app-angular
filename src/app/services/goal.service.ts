@@ -14,7 +14,11 @@ export class GoalService {
   constructor(private http: Http) { }
 
 	getGoals(): Promise<Goal[]> {
-    return this.http.get(`${this.goalsUrl}/goals`)
+    return this.http.get(`${this.goalsUrl}/goals`,
+        {
+          headers: new Headers({'token': 'TOKEN'})
+        }
+      )
       .toPromise()
       .then(response => response.json().data as Goal[])
       .catch(this.handleError)

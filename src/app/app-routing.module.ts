@@ -4,12 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { GoalDetailComponent } from './components/goal-detail/goal-detail.component';
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+     path: 'login',
+    component: LoginComponent 
   },
   {
     path: 'dashboard',

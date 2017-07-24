@@ -8,13 +8,12 @@ import { Goal } from '../models/goal'
 @Injectable()
 export class GoalService {
 
-  // TODO: Figure out how to append headers
-  private goalsUrl = 'https://goals-app-api.herokuapp.com';  // URL to web api
+  private goalsUrl = 'api/goals';  // URL to web api
 
   constructor(private http: Http) { }
 
 	getGoals(): Promise<Goal[]> {
-    return this.http.get(`${this.goalsUrl}/goals`,
+    return this.http.get(`${this.goalsUrl}`,
         {
           headers: new Headers({'token': 'TOKEN'})
         }

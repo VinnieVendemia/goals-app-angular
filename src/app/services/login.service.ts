@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 export class LoginService {
 
   // TODO: use real login url
-  private loginUrl = 'api/goals';  // URL to web api
+  private loginUrl = 'api/users';  // URL to web api
 
   constructor(private http: Http) { }
 

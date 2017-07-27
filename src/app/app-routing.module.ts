@@ -5,6 +5,7 @@ import { GoalDetailComponent } from './components/goal-detail/goal-detail.compon
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
      path: 'login',
     component: LoginComponent 
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'dashboard',

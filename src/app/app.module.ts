@@ -18,6 +18,7 @@ import { GoalService } from './services/goal.service';
 import { LoginService } from './services/login.service';
 import { GoalSearchComponent } from './components/goal-search/goal-search.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -28,7 +29,8 @@ import { AppRoutingModule }     from './app-routing.module';
     GoalDetailComponent,
     GoalsComponent,
     GoalSearchComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

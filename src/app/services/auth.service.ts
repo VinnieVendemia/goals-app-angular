@@ -28,6 +28,23 @@ export class AuthService {
       .catch(this.handleError)
 	}
 
+  register(username: string, password: string): Promise<void> {
+    return this.http
+      .post(
+          this.authUrl,
+          JSON.stringify(
+            {
+              username: username,
+              password: password
+            }
+          ),
+          {headers: this.headers}
+        )
+      .toPromise()
+      .then(() => null)
+      .catch(this.handleError)
+  }
+
   private headers = new Headers({'Content-Type': 'application/json'});
 
   private handleError(error: any): Promise<any> {

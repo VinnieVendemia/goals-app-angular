@@ -15,7 +15,7 @@ import { GoalDetailComponent } from './components/goal-detail/goal-detail.compon
 import { GoalsComponent } from './components/goals/goals.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GoalService } from './services/goal.service';
-import { LoginService } from './services/login.service';
+import { AuthService } from './services/auth.service';
 import { GoalSearchComponent } from './components/goal-search/goal-search.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -39,7 +39,7 @@ import { AppRoutingModule }     from './app-routing.module';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [GoalService, LoginService],
+  providers: [GoalService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

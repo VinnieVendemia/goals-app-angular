@@ -4,17 +4,17 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class LoginService {
+export class AuthService {
 
   // TODO: use real login url
-  private loginUrl = 'api/users';  // URL to web api
+  private authUrl = 'api/users';  // URL to web api
 
   constructor(private http: Http) { }
 
 	login(username: string, password: string): Promise<void> {
     return this.http
       .post(
-          this.loginUrl,
+          this.authUrl,
           JSON.stringify(
             {
               username: username,

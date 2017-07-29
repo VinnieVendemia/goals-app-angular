@@ -1,5 +1,6 @@
 <h2>Register for the Goals App</h2>
-<form [formGroup]="form">
+<div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="formGroupExampleInput">Email</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">

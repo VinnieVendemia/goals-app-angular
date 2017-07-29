@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PasswordValidation } from '../../validations/password_validation';
 
 @Component({
   selector: 'register',
@@ -11,11 +12,15 @@ export class RegisterComponent {
 	form: FormGroup;
 
   constructor(fb: FormBuilder)
-	  {
-	    this.form = fb.group({
-	    // define your control in you form
-	      password: [''],
-	      confirmPassword: ['']
-	    })
-	  }
+	{
+  	this.form = fb.group(
+    	{
+      	password: ['', Validators.required],
+      	confirmPassword: ['', Validators.required]
+    	},
+    	{
+      	validator: PasswordValidation.MatchPassword
+    	}
+  	)
+  }
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordValidation } from '../../validations/password_validation';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'register',
@@ -11,8 +13,10 @@ export class RegisterComponent {
 
 	form: FormGroup;
 
-  constructor(fb: FormBuilder)
-	{
+  constructor(
+    fb: FormBuilder,
+    private router: Router
+  ) {
   	this.form = fb.group(
     	{
       	password: ['', Validators.required],
@@ -22,5 +26,9 @@ export class RegisterComponent {
       	validator: PasswordValidation.MatchPassword
     	}
   	)
+  }
+
+  onSubmit(): void {
+    this.router.navigateByUrl('/dashboard');
   }
 }

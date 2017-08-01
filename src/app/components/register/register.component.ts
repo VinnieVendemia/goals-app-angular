@@ -3,6 +3,9 @@ import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } 
 import { PasswordValidation } from '../../validations/password_validation';
 import { Router } from '@angular/router';
 
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'register',
@@ -10,7 +13,6 @@ import { Router } from '@angular/router';
 })
 
 export class RegisterComponent {
-
 	form: FormGroup;
 
   constructor(
@@ -29,6 +31,6 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
-    this.router.navigateByUrl('/dashboard');
+     this.router.navigateByUrl('/dashboard')
   }
 }

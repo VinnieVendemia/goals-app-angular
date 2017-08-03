@@ -6,6 +6,7 @@ import { User }    from '../../models/user';
   selector: 'register-form',
   templateUrl: './register-form.component.html'
 })
+
 export class RegisterFormComponent {
 
   model = new User(1, 'Username', 'Password');

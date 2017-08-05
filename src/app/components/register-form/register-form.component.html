@@ -1,31 +1,18 @@
-<div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div>
-<form #registerForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+<!-- <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div> -->
+<!-- <form #registerForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
+<form #registerForm="ngForm">
+{{diagnostic}}
   <div class="form-group">
-    <label for="formGroupExampleInput">Email</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" 
-      placeholder="Email" [(ngModel)]="model.username" name="username">
+    <label for="username">Email</label>
+    <input type="text" class="form-control" id="username" placeholder="user@gmail.com" [(ngModel)]="model.username" name="username">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Password</label>
-    <input 
-      type="password"
-      class="form-control"
-      id="formGroupExampleInput2" 
-      formControlName="password"
-      [formGroup]="form"
-      placeholder="password1"
-    >
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="password1" [(ngModel)]="model.password" name="password">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Password Verification</label>
-    <input
-      type="password"
-      class="form-control"
-      id="formGroupExampleInput2"
-      formControlName="confirmPassword"
-      [formGroup]="form"
-      placeholder="password1"
-    >
+    <label for="passwordConfirm">Password Verification</label>
+    <input type="passwordConfirm" class="form-control" id="formGroupExampleInput2" placeholder="password1">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

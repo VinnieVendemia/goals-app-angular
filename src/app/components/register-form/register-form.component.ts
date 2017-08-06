@@ -4,7 +4,8 @@ import { User }    from '../../models/user';
 
 @Component({
   selector: 'register-form',
-  templateUrl: './register-form.component.html'
+  templateUrl: './register-form.component.html',
+  styleUrls: ['./register-form.component.css'],
 })
 
 export class RegisterFormComponent {

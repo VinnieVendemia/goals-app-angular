@@ -3,9 +3,12 @@
 <form #registerForm="ngForm">
 {{diagnostic}}
   <div class="form-group">
-    <label for="username">Email</label>
-    <input type="text" class="form-control" id="username" placeholder="user@gmail.com" [(ngModel)]="model.username" name="username">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" required id="username" placeholder="user@gmail.com"
+        [(ngModel)]="model.username" 
+        name="username" #username="ngModel">
   </div>
+  <div [hidden]="username.valid || username.pristine" class="alert alert-danger">UserName is required</div>
   <div class="form-group">
     <label for="password">Password</label>
     <input type="password" class="form-control" id="password" placeholder="password1" [(ngModel)]="model.password" name="password">

@@ -1,6 +1,6 @@
-<!-- <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div> -->
+wefr <!-- <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div> -->
 <!-- <form #registerForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
-<form #registerForm="ngForm">
+<form  (ngSubmit)="onSubmit()" #registerForm="ngForm">
 {{diagnostic}}
   <div class="form-group">
     <label for="username">Username</label>
@@ -17,5 +17,5 @@
     <label for="passwordConfirm">Password Verification</label>
     <input type="passwordConfirm" class="form-control" id="formGroupExampleInput2" placeholder="password1">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!registerForm.form.valid">Submit</button>
 </form>

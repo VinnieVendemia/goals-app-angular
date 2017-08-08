@@ -1,6 +1,6 @@
 wefr <!-- <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div> -->
 <!-- <form #registerForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
-<form  (ngSubmit)="onSubmit()" #registerForm="ngForm">
+<form (ngSubmit)="onSubmit(model)" #registerForm="ngForm">
 {{diagnostic}}
   <div class="form-group">
     <label for="username">Username</label>

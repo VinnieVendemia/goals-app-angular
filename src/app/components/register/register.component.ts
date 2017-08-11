@@ -13,26 +13,10 @@ import { User } from '../../models/user';
 })
 
 export class RegisterComponent {
-	// form: FormGroup;
 
   constructor(
     private router: Router
   ) {}
-
- //  constructor(
- //    fb: FormBuilder,
- //    private router: Router
- //  ) {
- //  	this.form = fb.group(
- //    	{
- //      	password: ['', Validators.required],
- //      	confirmPassword: ['', Validators.required]
- //    	},
- //    	{
- //      	validator: PasswordValidation.MatchPassword
- //    	}
- //  	)
- //  }
 
   onSubmit(): void {
      this.router.navigateByUrl('/dashboard')

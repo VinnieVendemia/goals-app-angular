@@ -1,7 +1,6 @@
-wefr <!-- <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div> -->
+<div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MatchPassword">Password not match</div>
 <!-- <form #registerForm="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
-<form (ngSubmit)="onSubmit(model)" #registerForm="ngForm">
-{{diagnostic}}
+<form (ngSubmit)="onSubmit(model)" #registerForm="ngForm" [formGroup]="form">
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" class="form-control" required id="username" placeholder="user@gmail.com"

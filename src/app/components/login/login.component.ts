@@ -18,8 +18,6 @@ export class LoginComponent {
   model = new User(1, 'Username', 'Password');
 
 	onSubmit(model) { 
-  	console.log('Username: ' + model.username)
-  	console.log('Pass: ' + model.password)
   	this.router.navigateByUrl('/dashboard')
   }
 }

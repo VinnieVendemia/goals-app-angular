@@ -33,11 +33,6 @@ export class RegisterFormComponent {
   model = new User(1, 'Username', 'Password');
   submitted = false;
   onSubmit(model) { 
-  	console.log('Username: ' + model.username)
-  	console.log('Pass: ' + model.password)
   	this.router.navigateByUrl('/dashboard')
   }
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
 }
